@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéLite RPG</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen">
+      <h1>PokéLite RPG</h1>
+      <div class="progress"><span id="loading-bar"></span></div>
+      <p id="loading-text">Loading game data...</p>
+    </div>
+
+    <header class="topbar">
+      <h1>PokéLite RPG</h1>
+      <div class="topbar-actions">
+        <button id="theme-toggle" class="ghost">🌙/☀️</button>
+        <button id="sound-toggle" class="ghost">🔊</button>
+        <button id="reset-game" class="danger">Reset</button>
+      </div>
+    </header>
+
+    <main id="app" class="app hidden">
+      <section class="panel player-panel">
+        <h2>Trainer</h2>
+        <div id="player-summary"></div>
+        <div class="actions-grid">
+          <button data-action="explore">Explore</button>
+          <button data-action="gym">Gym</button>
+          <button data-action="shop">Shop</button>
+          <button data-action="team">Team</button>
+          <button data-action="pc">PC</button>
+          <button data-action="achievements">Achievements</button>
+        </div>
+      </section>
+
+      <section class="panel battle-panel">
+        <h2>Battle Arena</h2>
+        <div id="battle-area" class="battle-area">
+          <p>Choose an action to start your journey.</p>
+        </div>
+        <div id="battle-actions" class="battle-actions"></div>
+      </section>
+
+      <section class="panel side-panel">
+        <h2>Region & Progress</h2>
+        <div id="region-info"></div>
+        <div id="daily-challenge" class="card"></div>
+        <div id="leaderboard" class="card"></div>
+      </section>
+    </main>
+
+    <div id="modal-root"></div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
